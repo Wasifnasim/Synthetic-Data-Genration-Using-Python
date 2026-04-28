@@ -61,8 +61,8 @@ df = pd.DataFrame({
     'age': ages,
     'sip_amount': sip_amounts,
     'frequency': frequencies,
-    'start_date': start_dates,
-    'last_investment_date': last_investment_dates,
+    'start_date': [d.strftime('%Y-%m-%d') for d in start_dates],
+'last_investment_date': [d.strftime('%Y-%m-%d') for d in last_investment_dates],
     'total_investments': total_investments,
     'stopped': stopped_status
 })
